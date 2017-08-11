@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import Hero from './Hero/'
-// import './App.css';
+import React, { Component } from 'react'
+import Header from './Header/Header.js'
+import Stats from './Stats/Stats.js'
+import Hero from './Hero/Hero.js'
 
 // user stats component
 // map component?
@@ -11,14 +12,9 @@ class Root extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h2>React Roguelike</h2>
-        </div>
-        <p className="App-intro">
-          The game will be here.
-        </p>
-		<Hero />
+		  <Header />
+		  <Stats />
+		  <Hero />
       </div>
     );
   }
