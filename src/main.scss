@@ -1,6 +1,18 @@
 $clr-maroon: #85144b;
+$clr-grey: #dddddd;
 
 body {
-	color: $clr-maroon;
+    color: $clr-maroon;
+    margin: 0;
+    background-color: $clr-grey;
+}
 
+h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
