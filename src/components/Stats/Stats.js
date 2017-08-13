@@ -9,32 +9,34 @@ class Stats extends Component {
     // also: initialStats
     constructor(props) {
         super(props);
-        this.tempStats = [
-            {
-                statName: "Health",
-                statValue: 100
-            },
-            {
-                statName: "Weapon",
-                statValue: "Stick"
-            },
-            {
-                statName: "Attack",
-                statValue: 100
-            },
-            {
-                statName: "Level",
-                statValue: 0
-            },
-            {
-                statName: "Next Level",
-                statValue: "100XP"
-            },
-            {
-                statName: "Dungeon",
-                statValue: 0
-            }
-        ];
+        this.state = {
+            tempStats: [
+                {
+                    statName: "Health",
+                    statValue: 100
+                },
+                {
+                    statName: "Weapon",
+                    statValue: "Stick"
+                },
+                {
+                    statName: "Attack",
+                    statValue: 100
+                },
+                {
+                    statName: "Level",
+                    statValue: 0
+                },
+                {
+                    statName: "Next Level",
+                    statValue: "100XP"
+                },
+                {
+                    statName: "Dungeon",
+                    statValue: 0
+                }
+            ]
+        };
     }
 
     // should receive props from redux?
@@ -42,15 +44,14 @@ class Stats extends Component {
     render() {
         return (
             <div className="Stats-container">
-                <p>Stats</p>
-                {this.tempStats.forEach(stat => {
+                {this.state.tempStats.map(stat => {
                     return (
-                        <div className="Stats__item">
+                        <div className="Stats__item" key={stat.statName}>
                             <div className="Stats__name">
-                                Ha: {stat.statName}
+                                {stat.statName}:
                             </div>
                             <div className="Stats__value">
-                                Ha: {stat.statValue}
+                                {stat.statValue}
                             </div>
                         </div>
                     );

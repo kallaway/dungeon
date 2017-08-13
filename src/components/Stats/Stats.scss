@@ -1,7 +1,19 @@
-$teal: #39CCCC;
+$teal: #39cccc;
 $black: #111111;
 
 .Stats-container {
-	background-color: $teal;
-	color: $black;
+    padding-left: 20px;
+    background-color: $teal;
+    color: $black;
+    display: flex;
+    align-items: center;
+}
+
+.Stats__item {
+    margin: 5px;
+    display: flex;
+}
+
+.Stats__name {
+    margin-right: 5px;
 }
