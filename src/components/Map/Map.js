@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import "./Map.scss";
 import Square from "../Square/Square.js";
-import Hero from "../Hero/Hero.js";
+// import Hero from "../Hero/Hero.js";
+// import Creature from "../Creature/Creature";
 
 // should get pixel map?
 // map should know what's going on on it and manage it

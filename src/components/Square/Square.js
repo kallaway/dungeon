@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Square.scss";
 import Hero from "../Hero/Hero.js";
-import Enemy from "../Enemy/Enemy.js";
+import Creature from "../Creature/Creature.js";
 
 // visibility: on and off
 // can contain - Enemy Item Hero Health
