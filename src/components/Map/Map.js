@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./Map.scss";
 import Square from "../Square/Square.js";
-// import Hero from "../Hero/Hero.js";
+import Hero from "../Hero/Hero.js";
 // import Creature from "../Creature/Creature";
 
 // should get pixel map?
@@ -20,12 +20,32 @@ import Square from "../Square/Square.js";
 class Map extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            squares: []
+        };
+    }
+
+    generateMap() {
+        let matrix = [];
+        for (let j = 0; j < 50; j++) {
+            let row = [];
+            for (let i = 0; i < 40; i++) {
+                row.push(<Square />);
+            }
+            console.log(row);
+            matrix.push(row);
+        }
+
+        console.log(matrix);
+        return matrix;
     }
 
     render() {
         return (
             <div className="Map-container">
+                {this.generateMap().map(row => {
+                    return row.map(cell => cell);
+                })}
                 <Square />
                 <Square />
                 <Square />
