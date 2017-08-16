@@ -46,6 +46,7 @@ class Map extends Component {
                 {this.generateMap().map(row => {
                     return row.map(cell => cell);
                 })}
+
                 <Square />
                 <Square />
                 <Square />
